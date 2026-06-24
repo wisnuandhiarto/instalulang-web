@@ -327,7 +327,7 @@ function handleDispatch(event) {
         soundSuccess();
         
         // Build Emergency Message Payload for WhatsApp
-        const waNumber = "6282210006767"; // instalulang.id WhatsApp Number
+        const waNumber = "6281804558828"; // instalulang.id WhatsApp Number
         
         // DEFCON Status emojis
         let defconStatus = "STABLE";
