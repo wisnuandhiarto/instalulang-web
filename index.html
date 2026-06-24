@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instalulang.id // IT WAR ROOM & COMMAND CONSOLE</title>
+    <!-- Google Fonts for Cyberpunk/Sci-Fi Theme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-defcon5">
+
+    <!-- Sound Toggle & Audio Control -->
+    <div class="audio-control" id="audio-toggle">
+        <span class="audio-icon">🔊</span> SOUND: ON
+    </div>
+
+    <!-- 1. ENTRY SCANNER SCREEN -->
+    <div id="scanner-screen" class="console-overlay">
+        <div class="scanner-container">
+            <div class="scanner-header">
+                <div class="scanner-title">INSTALULANG.ID SECURITY CONSOLE</div>
+                <div class="scanner-subtitle">SECURE CONNECTION SCANNER v4.1</div>
+            </div>
+            
+            <div class="scanner-hud">
+                <div class="radar-scan">
+                    <div class="radar-sweep"></div>
+                    <div class="radar-grid"></div>
+                    <div class="radar-dot" style="top: 30%; left: 45%;"></div>
+                    <div class="radar-dot" style="top: 70%; left: 80%;"></div>
+                    <div class="radar-dot" style="top: 55%; left: 20%;"></div>
+                </div>
+                
+                <div class="scan-details">
+                    <div class="diagnostic-line">SYSTEM STATUS: <span class="blink text-warning">SCANNING...</span></div>
+                    <div class="diagnostic-line">IPV4 ADDRESS: <span id="scan-ip">127.0.0.1</span></div>
+                    <div class="diagnostic-line">NETWORK LINK: <span id="scan-net">LOCAL_LAN</span></div>
+                    <div class="diagnostic-line">SECURE PORT: <span id="scan-port">PORT_8080</span></div>
+                    <div class="diagnostic-line">BROWSER CORE: <span id="scan-browser">SECURE_AGENT</span></div>
+                </div>
+            </div>
+
+            <div class="scanner-logs" id="scanner-log-box">
+                <div class="log-entry">> Initializing network handshake...</div>
+            </div>
+
+            <button id="enter-btn" class="cyber-btn hidden" onclick="enterConsole()">
+                <span class="cyber-btn-glitch">ACCESS COMMAND CONSOLE</span>
+                <span class="cyber-btn-tag">R90</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 2. MAIN TACTICAL CONSOLE -->
+    <div id="war-room" class="console-layout hidden">
+        
+        <!-- Header -->
+        <header class="console-header">
+            <div class="header-branding">
+                <div class="logo">
+                    <span class="accent-glow">INSTALULANG</span>.id
+                </div>
+                <div class="logo-subtitle">TACTICAL IT OPERATIONS // CRISIS DIVISION</div>
+            </div>
+            <div class="header-status">
+                <div class="status-indicator">
+                    <div class="status-dot pulsing"></div>
+                    <span id="current-threat-level">DEFCON 5 // SYSTEM STABLE</span>
+                </div>
+                <div class="status-clock" id="live-clock">12:00:00</div>
+            </div>
+        </header>
+
+        <!-- Console Grid -->
+        <div class="console-grid">
+            
+            <!-- COLUMN 1: DEFCON COMMAND (Threat Level) -->
+            <section class="console-panel panel-left">
+                <div class="panel-border-top"></div>
+                <div class="panel-header">
+                    <h2>THREAT RESPONSE LEVEL</h2>
+                    <span class="panel-tag">[SYS.DEFCON]</span>
+                </div>
+                <div class="panel-body defcon-selector-container">
+                    <p class="panel-instruction">Pilih tingkat ancaman untuk menyesuaikan penanganan teknis:</p>
+                    
+                    <!-- DEFCON 5 -->
+                    <div class="defcon-card active" data-defcon="5" id="card-defcon5">
+                        <div class="defcon-num">5</div>
+                        <div class="defcon-details">
+                            <h3>DEFCON 5: OPTIMIZATION & SETUP</h3>
+                            <p>Keadaan stabil. Peningkatan produktivitas, audit jaringan, perapian server, setup komputer baru, optimasi ruang rapat.</p>
+                            <span class="response-tag">Tindakan: Taktis, Terencana</span>
+                        </div>
+                    </div>
+
+                    <!-- DEFCON 3 -->
+                    <div class="defcon-card" data-defcon="3" id="card-defcon3">
+                        <div class="defcon-num">3</div>
+                        <div class="defcon-details">
+                            <h3>DEFCON 3: TROUBLESHOOTING</h3>
+                            <p>Gangguan operasional. Komputer/laptop lemot/mati, printer error, koneksi WiFi tidak stabil, gangguan LCD proyektor.</p>
+                            <span class="response-tag">Tindakan: Respon Cepat & Diagnosis</span>
+                        </div>
+                    </div>
+
+                    <!-- DEFCON 1 -->
+                    <div class="defcon-card" data-defcon="1" id="card-defcon1">
+                        <div class="defcon-num">1</div>
+                        <div class="defcon-details">
+                            <h3>DEFCON 1: SYSTEM MELTDOWN</h3>
+                            <p>Krisis total! Server mati, seluruh jaringan kantor lumpuh, proyektor ruang rapat mati di tengah presentasi penting direksi.</p>
+                            <span class="response-tag">Tindakan: Intervensi Darurat Segera!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <span>SECURITY CLEARANCE: PUBLIC ACCESS</span>
+                </div>
+            </section>
+
+            <!-- COLUMN 2: TACTICAL SECTOR MAP (Interactive Blueprints) -->
+            <section class="console-panel panel-middle">
+                <div class="panel-border-top"></div>
+                <div class="panel-header">
+                    <h2>TACTICAL SECTOR BLUEPRINT</h2>
+                    <span class="panel-tag">[SYS.MAP]</span>
+                </div>
+                <div class="panel-body">
+                    <!-- Environment Selector Tabs -->
+                    <div class="sector-tabs">
+                        <button class="sector-tab active" data-sector="office">KANTOR</button>
+                        <button class="sector-tab" data-sector="campus">KAMPUS/SEKOLAH</button>
+                        <button class="sector-tab" data-sector="hospital">RUMAH SAKIT</button>
+                        <button class="sector-tab" data-sector="factory">PABRIK</button>
+                    </div>
+
+                    <p class="panel-instruction text-center">Klik pada titik krisis di blueprint untuk melakukan analisis:</p>
+
+                    <!-- Interactive Map Container -->
+                    <div class="map-viewframe">
+                        <!-- Blueprint Grid Background -->
+                        <div class="blueprint-grid"></div>
+
+                        <!-- OFFICE BLUEPRINT -->
+                        <div class="sector-blueprint active" id="blueprint-office">
+                            <svg viewBox="0 0 500 300" class="blueprint-svg">
+                                <!-- Walls & Rooms -->
+                                <rect x="10" y="10" width="480" height="280" fill="none" class="blueprint-wall" stroke-width="2"/>
+                                <line x1="250" y1="10" x2="250" y2="290" class="blueprint-wall" stroke-dasharray="5 5"/>
+                                <line x1="10" y1="150" x2="250" y2="150" class="blueprint-wall"/>
+                                <line x1="250" y1="100" x2="490" y2="100" class="blueprint-wall"/>
+                                <!-- Texts -->
+                                <text x="30" y="30" class="blueprint-label">WORKSPACE AREA A</text>
+                                <text x="30" y="175" class="blueprint-label">SERVER ROOM</text>
+                                <text x="270" y="30" class="blueprint-label">CONFERENCE ROOM</text>
+                                <text x="270" y="125" class="blueprint-label">EXECUTIVE OFFICE</text>
+
+                                <!-- Pulsing hotspots depending on DEFCON -->
+                                <g class="hotspot defcon5-only" data-title="Optimasi Workspace A" data-desc="Setup jaringan LAN & penataan kabel workstation baru agar produktivitas maksimal.">
+                                    <circle cx="120" cy="80" r="10" class="hotspot-outer"/>
+                                    <circle cx="120" cy="80" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon3-only" data-title="Server Room Switch Error" data-desc="Koneksi switch backbone sering terputus, butuh troubleshooting routing & perbaikan kabel LAN.">
+                                    <circle cx="130" cy="220" r="10" class="hotspot-outer"/>
+                                    <circle cx="130" cy="220" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon1-only" data-title="Meltdown Conference Room" data-desc="Proyektor LCD mati & sound system ruang rapat macet tepat sebelum rapat pemegang saham dimulai!">
+                                    <circle cx="380" cy="60" r="10" class="hotspot-outer"/>
+                                    <circle cx="380" cy="60" r="4" class="hotspot-inner"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- CAMPUS/SCHOOL BLUEPRINT -->
+                        <div class="sector-blueprint" id="blueprint-campus">
+                            <svg viewBox="0 0 500 300" class="blueprint-svg">
+                                <rect x="10" y="10" width="480" height="280" fill="none" class="blueprint-wall" stroke-width="2"/>
+                                <line x1="170" y1="10" x2="170" y2="290" class="blueprint-wall"/>
+                                <line x1="330" y1="10" x2="330" y2="290" class="blueprint-wall"/>
+                                <line x1="170" y1="150" x2="330" y2="150" class="blueprint-wall"/>
+                                <text x="30" y="30" class="blueprint-label">LAB KOMPUTER</text>
+                                <text x="185" y="30" class="blueprint-label">RUANG GURU</text>
+                                <text x="185" y="175" class="blueprint-label">ADMINISTRASI</text>
+                                <text x="350" y="30" class="blueprint-label">RUANG KELAS A</text>
+
+                                <g class="hotspot defcon5-only" data-title="Instalasi Lab Komputer" data-desc="Instalasi sistem operasi baru, update software penunjang ujian, dan konfigurasi LAN lab sekolah.">
+                                    <circle cx="90" cy="150" r="10" class="hotspot-outer"/>
+                                    <circle cx="90" cy="150" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon3-only" data-title="PC Guru Terinfeksi Malware" data-desc="PC utama di ruang guru terinfeksi virus, merusak file rapor penting. Butuh penanganan troubleshooting & backup data.">
+                                    <circle cx="250" cy="80" r="10" class="hotspot-outer"/>
+                                    <circle cx="250" cy="80" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon1-only" data-title="Koneksi Server Ujian Putus" data-desc="Jaringan LAN pusat terputus di tengah pelaksanaan ujian sekolah berbasis komputer (CBT). Status Darurat!">
+                                    <circle cx="250" cy="220" r="10" class="hotspot-outer"/>
+                                    <circle cx="250" cy="220" r="4" class="hotspot-inner"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- HOSPITAL BLUEPRINT -->
+                        <div class="sector-blueprint" id="blueprint-hospital">
+                            <svg viewBox="0 0 500 300" class="blueprint-svg">
+                                <rect x="10" y="10" width="480" height="280" fill="none" class="blueprint-wall" stroke-width="2"/>
+                                <line x1="150" y1="10" x2="150" y2="290" class="blueprint-wall"/>
+                                <line x1="150" y1="180" x2="490" y2="180" class="blueprint-wall"/>
+                                <line x1="320" y1="10" x2="320" y2="180" class="blueprint-wall"/>
+                                <text x="30" y="30" class="blueprint-label">LAB & DIAGNOSTIK</text>
+                                <text x="170" y="30" class="blueprint-label">ICU BLOCK A</text>
+                                <text x="340" y="30" class="blueprint-label">RUANG PENDAFTARAN</text>
+                                <text x="170" y="210" class="blueprint-label">PHARMACY STATIONS</text>
+
+                                <g class="hotspot defcon5-only" data-title="Optimasi Antrean RS" data-desc="Setup monitor antrean & integrasi PC pendaftaran dengan printer label baru agar alur pasien lancar.">
+                                    <circle cx="410" cy="100" r="10" class="hotspot-outer"/>
+                                    <circle cx="410" cy="100" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon3-only" data-title="Laptop Apotek Mati Total" data-desc="Laptop input resep obat mati mendadak, menghambat antrean pengambilan obat pasien. Butuh perbaikan hardware segera.">
+                                    <circle cx="320" cy="240" r="10" class="hotspot-outer"/>
+                                    <circle cx="320" cy="240" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon1-only" data-title="Sistem SIMRS Down" data-desc="Koneksi database SIMRS ke PC Diagnostik ICU terputus. Dokter tidak bisa membaca hasil rekam medis darurat. MELTDOWN!">
+                                    <circle cx="230" cy="100" r="10" class="hotspot-outer"/>
+                                    <circle cx="230" cy="100" r="4" class="hotspot-inner"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- FACTORY BLUEPRINT -->
+                        <div class="sector-blueprint" id="blueprint-factory">
+                            <svg viewBox="0 0 500 300" class="blueprint-svg">
+                                <rect x="10" y="10" width="480" height="280" fill="none" class="blueprint-wall" stroke-width="2"/>
+                                <line x1="10" y1="100" x2="350" y2="100" class="blueprint-wall"/>
+                                <line x1="350" y1="10" x2="350" y2="290" class="blueprint-wall"/>
+                                <line x1="10" y1="200" x2="350" y2="200" class="blueprint-wall"/>
+                                <text x="30" y="30" class="blueprint-label">PERAKITAN LINE A</text>
+                                <text x="30" y="130" class="blueprint-label">PERAKITAN LINE B</text>
+                                <text x="30" y="235" class="blueprint-label">INVENTORY WAREHOUSE</text>
+                                <text x="365" y="30" class="blueprint-label">KANTOR OPERASIONAL</text>
+
+                                <g class="hotspot defcon5-only" data-title="Audit Jaringan Gudang" data-desc="Setup Access Point industrial & perapian jaringan nirkabel barcode scanner di area gudang logistik.">
+                                    <circle cx="180" cy="250" r="10" class="hotspot-outer"/>
+                                    <circle cx="180" cy="250" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon3-only" data-title="Komputer Monitor Line A mati" data-desc="PC pemantau sensor rakitan mati, butuh penanganan motherboard/harddisk untuk mengembalikan status monitor.">
+                                    <circle cx="180" cy="50" r="10" class="hotspot-outer"/>
+                                    <circle cx="180" cy="50" r="4" class="hotspot-inner"/>
+                                </g>
+                                <g class="hotspot defcon1-only" data-title="Main Switchboard Loop" data-desc="Switch utama server pabrik mengalami broadcast loop, melumpuhkan seluruh komunikasi data barcode & mesin rakitan!">
+                                    <circle cx="420" cy="150" r="10" class="hotspot-outer"/>
+                                    <circle cx="420" cy="150" r="4" class="hotspot-inner"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Map Info Readout -->
+                    <div class="map-readout">
+                        <div class="readout-title" id="hotspot-title">KLIK TANDA RADAR UNTUK MENDETEKSI KRISIS</div>
+                        <div class="readout-text" id="hotspot-desc">Silakan pilih gedung sektor pada tab di atas, kemudian pilih titik radar berkedip untuk memuat keluhan langsung ke panel peluncuran misi krisis di sebelah kanan Anda.</div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <span>SECTOR STATUS: COORDINATES TRACKED</span>
+                </div>
+            </section>
+
+            <!-- COLUMN 3: MISSION CONTROL (Dispatch Form) -->
+            <section class="console-panel panel-right">
+                <div class="panel-border-top"></div>
+                <div class="panel-header">
+                    <h2>MISSION LAUNCH RADAR</h2>
+                    <span class="panel-tag">[SYS.LAUNCH]</span>
+                </div>
+                <div class="panel-body">
+                    <p class="panel-instruction">Kirim koordinat krisis ini langsung ke Unit Taktis instalulang.id:</p>
+
+                    <form id="dispatch-form" onsubmit="handleDispatch(event)">
+                        <div class="form-group">
+                            <label for="commander-name">NAMA KOMANDAN / PENGIRIM</label>
+                            <input type="text" id="commander-name" required placeholder="Contoh: Pak Budi / Bu Rina">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sector-name">SEKTOR INSTANSI / NAMA BISNIS</label>
+                            <input type="text" id="sector-name" required placeholder="Contoh: PT Sukses Mandiri / RS Medika">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="secure-line">LINE WHATSAPP SECURE</label>
+                            <input type="tel" id="secure-line" required placeholder="Contoh: 08123456xxxx">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="crisis-log">CRISIS TARGET BRIEF (LOG DATA)</label>
+                            <textarea id="crisis-log" rows="4" required placeholder="Detail krisis IT yang terjadi... (Anda juga bisa mengisi ini secara otomatis dengan mengeklik titik merah di blueprint peta tengah)"></textarea>
+                        </div>
+
+                        <button type="submit" class="launch-btn" id="launch-button">
+                            <div class="launch-glow"></div>
+                            LAUNCH CRISIS MISSION
+                        </button>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <span>LAUNCH BAY STATUS: ARMED & READY</span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 3. CRISIS MISSION LAUNCH SEQUENCE OVERLAY -->
+    <div id="launch-overlay" class="launch-overlay hidden">
+        <div class="siren-light"></div>
+        <div class="launch-sequence-container">
+            <h1 class="critical-text blink">CRITICAL IT EMERGENCY DECLARED</h1>
+            <h2 class="critical-subtitle">INITIATING INSTALULANG.ID TACTICAL RESPONSE</h2>
+
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="launch-progress"></div>
+            </div>
+
+            <div class="sequence-logs" id="launch-logs">
+                <div>> ENCRYPTING EMERGENCY DATA FIELD...</div>
+            </div>
+
+            <div class="countdown-display" id="countdown-num">3</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
