@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>instalulang.id // Solusi IT Terpercaya & Profesional</title>
-    <!-- Google Fonts for Brochure Aesthetics -->
+    <title>instalulang.id // Layanan IT Support & Troubleshooting Profesional</title>
+    <!-- Google Fonts for Clean & Luxurious Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,246 +12,344 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="profile-header">
+    <!-- Header / Navigation Bar -->
+    <header class="main-header">
         <div class="header-container">
-            <a href="#" class="logo-wrapper">
-                <!-- Round Maroon Logo Badge from Brochure -->
-                <div class="logo-badge">
-                    <span class="logo-top">instal</span>
-                    <span class="logo-mid">ulang</span>
-                    <span class="logo-bot">.id</span>
-                </div>
+            <a href="#" class="logo">
+                <span>instalulang</span>.id
             </a>
-            <nav class="nav-links">
-                <a href="#keunggulan">Mengapa Kami</a>
-                <a href="#administrasi">Administrasi</a>
-                <a href="#kontak">Hubungi Kami</a>
+            <nav class="main-nav" id="nav-menu">
+                <a href="#layanan" class="nav-link">Layanan</a>
+                <a href="#sektor" class="nav-link">Sektor Bisnis</a>
+                <a href="#konsultasi" class="nav-link">Konsultasi</a>
             </nav>
+            <div class="header-action">
+                <a href="https://wa.me/6281804558828" class="btn btn-secondary btn-sm">Hubungi WA</a>
+            </div>
+            <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Showcase Section (Right side of the brochure) -->
-    <section class="hero-showcase">
-        <!-- SVG waves reflecting the teal brochure curvature -->
-        <div class="wave-accent-top"></div>
-        
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="hero-container">
-            <div class="hero-info">
-                <div class="hero-logo-center">
-                    <div class="logo-badge large">
-                        <span class="logo-top">instal</span>
-                        <span class="logo-mid">ulang</span>
-                        <span class="logo-bot">.id</span>
-                    </div>
-                </div>
-                <h1>Solusi IT Terpercaya, Kerja Jadi Lancar, Instansi Makin Produktif!</h1>
-                <p class="hero-description">Layanan Perawatan, Perbaikan, & Optimasi Komputer/Jaringan untuk Instansi Publik & Lembaga Pendidikan di Wilayah Grogol & Sekitarnya.</p>
-                
-                <!-- Slogans from brochure -->
-                <div class="hero-slogans">
-                    <span class="slogan-tag">Cepat</span>
-                    <span class="slogan-separator">•</span>
-                    <span class="slogan-tag">Bergaransi</span>
-                    <span class="slogan-separator">•</span>
-                    <span class="slogan-tag">Transparan</span>
-                </div>
-                
+            <div class="hero-content">
+                <span class="hero-badge">Profesional IT Support & Solusi Infrastruktur</span>
+                <h1>Solusi IT Handal untuk Kelancaran Operasional Bisnis Anda</h1>
+                <p>Mengatasi troubleshoot komputer, perbaikan jaringan kantor, optimasi produktivitas kerja, dan instalasi LCD projector ruang rapat secara cepat dan ahli.</p>
                 <div class="hero-actions">
-                    <a href="https://wa.me/6281804558828" class="btn btn-primary">Hubungi Kami Sekarang</a>
+                    <a href="#konsultasi" class="btn btn-primary">Mulai Konsultasi Gratis</a>
+                    <a href="#layanan" class="btn btn-tertiary">Pelajari Layanan Kami</a>
                 </div>
             </div>
-
             <div class="hero-visual">
-                <div class="circle-frame">
-                    <img src="hero-bg.jpg" alt="Layanan IT Support instalulang.id" class="hero-img">
-                </div>
+                <!-- Premium Minimalist Tech Illustration -->
+                <svg viewBox="0 0 500 400" class="hero-svg">
+                    <defs>
+                        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0f62fe" />
+                            <stop offset="100%" stop-color="#8a3ffc" />
+                        </linearGradient>
+                        <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+                            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.08" />
+                        </filter>
+                    </defs>
+                    
+                    <!-- Server Rack Isometric Graphic -->
+                    <rect x="80" y="80" width="340" height="240" rx="16" fill="#ffffff" filter="url(#dropShadow)" />
+                    
+                    <!-- Inside Grid Lines -->
+                    <line x1="80" y1="140" x2="420" y2="140" stroke="#f1f5f9" stroke-width="2" />
+                    <line x1="80" y1="230" x2="420" y2="230" stroke="#f1f5f9" stroke-width="2" />
+                    
+                    <!-- Decorative Server Slots -->
+                    <rect x="110" y="105" width="280" height="16" rx="4" fill="#f8fafc" />
+                    <circle cx="125" cy="113" r="4" fill="#0f62fe" />
+                    <rect x="140" y="111" width="60" height="4" rx="2" fill="#e2e8f0" />
+                    
+                    <rect x="110" y="165" width="280" height="16" rx="4" fill="#f8fafc" />
+                    <circle cx="125" cy="173" r="4" fill="#8a3ffc" />
+                    <rect x="140" y="171" width="100" height="4" rx="2" fill="#e2e8f0" />
+                    
+                    <rect x="110" y="255" width="280" height="16" rx="4" fill="url(#blueGrad)" />
+                    <circle cx="125" cy="263" r="4" fill="#ffffff" />
+                    <rect x="140" y="261" width="80" height="4" rx="2" fill="rgba(255,255,255,0.4)" />
+                    
+                    <!-- Graph nodes representation -->
+                    <circle cx="340" cy="173" r="6" fill="#00e5ff" />
+                    <circle cx="360" cy="173" r="3" fill="#cbd5e1" />
+                    <circle cx="372" cy="173" r="3" fill="#cbd5e1" />
+                </svg>
             </div>
         </div>
     </section>
 
-    <!-- Why Us Section (Left side of the brochure) -->
-    <section class="why-us-section" id="keunggulan">
+    <!-- Services Section -->
+    <section class="services-section" id="layanan">
         <div class="container">
-            <div class="section-title-wrap">
-                <span class="title-quote">“</span>
-                <h2>Mengapa instalulang.id?</h2>
-                <p>Poin Unggulan Pelayanan IT Kami</p>
+            <div class="section-header">
+                <h2>Layanan IT Spesialis Kami</h2>
+                <p>Kami hadir untuk memastikan seluruh infrastruktur IT di tempat kerja Anda berfungsi secara optimal dan tanpa hambatan.</p>
             </div>
-
-            <div class="features-grid">
+            
+            <div class="services-grid">
                 
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="check-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
                         </svg>
                     </div>
-                    <div class="feature-text">
-                        <h3>Teknisi Berpengalaman</h3>
-                        <p>Lebih dari 15 tahun menangani diagnostik hardware, sistem integrasi, dan jaringan.</p>
-                    </div>
+                    <h3>Troubleshooting Komputer & Laptop</h3>
+                    <p>Penanganan cepat untuk komputer lambat, terinfeksi virus, mati total, penggantian hardware rusak, hingga perbaikan sistem operasi (OS) bermasalah.</p>
+                    <ul class="service-features">
+                        <li>Instalasi OS & Pembersihan Virus</li>
+                        <li>Upgrade RAM & SSD</li>
+                        <li>Perbaikan Motherboard & Hardware</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="check-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                            <line x1="12" y1="20" x2="12.01" y2="20"></line>
                         </svg>
                     </div>
-                    <div class="feature-text">
-                        <h3>Pengecekan Akurat</h3>
-                        <p>Masalah didiagnosis sampai ke akar, bukan sekadar solusi sementara.</p>
-                    </div>
+                    <h3>Infrastruktur Jaringan & WiFi</h3>
+                    <p>Pemasangan LAN, konfigurasi Access Point, perapian kabel server, pengamanan jaringan dari pengguna luar, dan troubleshooting koneksi internet lambat.</p>
+                    <ul class="service-features">
+                        <li>Setup Router & Mikrotik</li>
+                        <li>Instalasi Kabel Jaringan (LAN Cat6)</li>
+                        <li>Manajemen Bandwidth & Firewall</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="check-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                     </div>
-                    <div class="feature-text">
-                        <h3>Respons Cepat</h3>
-                        <p>Lokasi kami yang strategis di Grogol siap memberikan penanganan tepat waktu saat terjadi kendala darurat.</p>
-                    </div>
+                    <h3>Produktivitas Kerja & Audit IT</h3>
+                    <p>Audit perangkat lunak lisensi resmi, optimasi tools kolaborasi kerja kantor (Google Workspace/Office 365), serta solusi penyimpanan cadangan data (*backup*).</p>
+                    <ul class="service-features">
+                        <li>Setup Email Bisnis Profesional</li>
+                        <li>Sistem Backup Cloud & Lokal</li>
+                        <li>Lisensi Software & Antivirus Bisnis</li>
+                    </ul>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="check-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 7a2 2 0 0 0-2-2h-4v10h4a2 2 0 0 0 2-2V7z"></path>
+                            <path d="M1 7a2 2 0 0 1 2-2h12v10H3a2 2 0 0 1-2-2V7z"></path>
+                            <path d="M15 5v10"></path>
+                            <circle cx="8" cy="18" r="3"></circle>
+                            <circle cx="18" cy="18" r="3"></circle>
                         </svg>
                     </div>
-                    <div class="feature-text">
-                        <h3>Fleksibel & Kooperatif</h3>
-                        <p>Siap melakukan pemeliharaan di tempat (on-site) tanpa mengganggu jam operasional kantor.</p>
-                    </div>
+                    <h3>LCD Projector & Ruang Rapat</h3>
+                    <p>Pemasangan instalasi kabel rapi untuk proyektor ruang rapat, konfigurasi input layar nirkabel (wireless casting), dan perbaikan kendala proyektor mati/buram.</p>
+                    <ul class="service-features">
+                        <li>Instalasi Braket Dinding & Plafon</li>
+                        <li>Integrasi Audio Rapat</li>
+                        <li>Perbaikan Tampilan & Ganti Lampu</li>
+                    </ul>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Administrative Perks Section (Bottom middle section of the brochure) -->
-    <section class="admin-perks-section" id="administrasi">
+    <!-- Sectors Section -->
+    <section class="sectors-section" id="sektor">
         <div class="container">
-            <div class="admin-box">
-                <div class="admin-badge">B2B & Instansi Support</div>
-                <h2>Dukungan Administrasi Resmi & SPJ</h2>
-                <p>Kami memahami alur administrasi instansi publik dan sekolah. instalulang.id sepenuhnya siap mendukung proses pertanggungjawaban keuangan Anda.</p>
+            <div class="section-header">
+                <h2>Solusi Khusus Sektor Bisnis</h2>
+                <p>Setiap lingkungan kerja memiliki tantangan IT yang berbeda. Kami menyesuaikan solusi kami sesuai kebutuhan operasional Anda.</p>
+            </div>
+            
+            <div class="sectors-grid">
                 
-                <div class="admin-grid">
-                    <div class="admin-card">
-                        <span class="admin-num">01</span>
-                        <h4>Nota Resmi & Stempel Toko</h4>
-                        <p>Setiap transaksi dan jasa penanganan disertai dengan kuitansi dan stempel resmi toko.</p>
-                    </div>
-                    <div class="admin-card">
-                        <span class="admin-num">02</span>
-                        <h4>Pendukung Laporan (SPJ)</h4>
-                        <p>Kami siap menyiapkan dokumen penunjang yang dibutuhkan untuk laporan SPJ instansi Anda.</p>
-                    </div>
+                <!-- Sector 1 -->
+                <div class="sector-card">
+                    <div class="sector-badge">Corporate</div>
+                    <h3>Kantor / Corporate</h3>
+                    <p>Fokus pada kestabilan jaringan karyawan, keandalan email perusahaan, kelancaran presentasi ruang rapat, serta pengamanan database kantor.</p>
                 </div>
+
+                <!-- Sector 2 -->
+                <div class="sector-card">
+                    <div class="sector-badge">Education</div>
+                    <h3>Sekolah / Kampus</h3>
+                    <p>Optimalisasi Lab komputer siswa, penyiapan server lokal untuk Ujian Berbasis Komputer (CBT), serta manajemen WiFi terpusat untuk siswa & guru.</p>
+                </div>
+
+                <!-- Sector 3 -->
+                <div class="sector-card">
+                    <div class="sector-badge">Healthcare</div>
+                    <h3>Rumah Sakit / Klinik</h3>
+                    <p>Menjamin konektivitas sistem data rekam medis pasien (SIMRS) di PC unit darurat (ICU) tetap aktif 24/7 tanpa gangguan delay.</p>
+                </div>
+
+                <!-- Sector 4 -->
+                <div class="sector-card">
+                    <div class="sector-badge">Industrial</div>
+                    <h3>Pabrik / Industri</h3>
+                    <p>Instalasi WiFi industrial berjangkauan luas untuk scan barcode logistik gudang, perapian server pabrik, dan monitoring PC mesin sensor produksi.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact & Details Section (Center section of the brochure) -->
-    <section class="contact-section" id="kontak">
-        <div class="container">
-            <div class="section-title-wrap text-center">
-                <h2>Hubungi Kami Sekarang!</h2>
-                <p>Silakan gunakan saluran komunikasi di bawah untuk terhubung langsung dengan tim kami.</p>
-            </div>
-
-            <div class="contact-grid">
-                
-                <!-- Contact Card: WhatsApp -->
-                <a href="https://wa.me/6281804558828" class="contact-item-card" target="_blank" rel="noopener">
-                    <div class="contact-icon wa">
-                        <!-- Custom WA SVG -->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.13-1.347a9.945 9.945 0 0 0 4.887 1.277h.005c5.505 0 9.989-4.478 9.99-9.985A9.974 9.974 0 0 0 12.012 2zm5.748 13.568c-.24-.12-1.413-.698-1.633-.778-.22-.08-.381-.12-.54.12-.16.24-.619.778-.759.938-.14.16-.28.18-.52.06-.24-.12-.998-.367-1.902-1.174-.703-.627-1.178-1.402-1.317-1.643-.14-.24-.015-.37.106-.49.11-.107.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.195-.47-.393-.407-.54-.415-.14-.007-.3-.008-.46-.008a.885.885 0 0 0-.64.3c-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.581 4.096 3.618.572.247 1.018.395 1.366.505.574.182 1.096.156 1.507.095.459-.069 1.413-.578 1.613-1.138.2-.56.2-1.04.14-1.138-.06-.1-.22-.16-.46-.28z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h4>LINE WHATSAPP</h4>
-                        <p>0818-0455-8828</p>
-                    </div>
-                </a>
-
-                <!-- Contact Card: Email -->
-                <a href="mailto:sastrojalu@gmail.com" class="contact-item-card">
-                    <div class="contact-icon email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h4>EMAIL</h4>
-                        <p>sastrojalu@gmail.com</p>
-                    </div>
-                </a>
-
-                <!-- Contact Card: WA Channel -->
-                <a href="https://bit.ly/instalulangid-channel" class="contact-item-card" target="_blank" rel="noopener">
-                    <div class="contact-icon channel">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h4>WHATSAPP CHANNEL</h4>
-                        <p>bit.ly/instalulangid-channel</p>
-                    </div>
-                </a>
-
-                <!-- Contact Card: Linktree -->
-                <a href="https://linktr.ee/instalulang.id" class="contact-item-card" target="_blank" rel="noopener">
-                    <div class="contact-icon linktree">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h4>PORTAL LINKTREE</h4>
-                        <p>linktr.ee/instalulang.id</p>
-                    </div>
-                </a>
-
-            </div>
-
-            <!-- Address Card -->
-            <div class="address-container-card">
-                <div class="map-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
+    <!-- Consultation Section (Wizard Form 1-2-3) -->
+    <section class="consultation-section" id="konsultasi">
+        <div class="container max-w-md">
+            <div class="consultation-box">
+                <div class="consultation-header">
+                    <h2>Mulai Konsultasi IT Anda</h2>
+                    <p>Lengkapi langkah sederhana di bawah untuk mendapatkan estimasi penanganan langsung ke WhatsApp kami.</p>
                 </div>
-                <div class="address-content">
-                    <h4>LOKASI WORKSHOP</h4>
-                    <p class="address-main">Gedung ARUTALA, Jln. Raya Solo-Baki No. 101, Gedangan, Grogol, Solobaru, Sukoharjo.</p>
-                    <p class="address-sub">Wilayah Operasional Utama: Grogol & Sekitarnya.</p>
-                </div>
-            </div>
 
+                <!-- Step Indicator -->
+                <div class="step-indicator">
+                    <div class="step-dot active" id="dot-1">1</div>
+                    <div class="step-line" id="line-1"></div>
+                    <div class="step-dot" id="dot-2">2</div>
+                    <div class="step-line" id="line-2"></div>
+                    <div class="step-dot" id="dot-3">3</div>
+                </div>
+
+                <form id="wizard-form" onsubmit="submitForm(event)">
+                    
+                    <!-- STEP 1: SELECT SECTOR -->
+                    <div class="step-content active" id="step-1-content">
+                        <h3>Langkah 1: Sektor operasional Anda?</h3>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="sector" value="Kantor" checked>
+                                <span class="option-title">Kantor / Corporate</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="sector" value="Sekolah / Kampus">
+                                <span class="option-title">Sekolah / Kampus</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="sector" value="Rumah Sakit / Klinik">
+                                <span class="option-title">Rumah Sakit / Klinik</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="sector" value="Pabrik / Gudang">
+                                <span class="option-title">Pabrik / Gudang</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="sector" value="Perumahan / Pribadi">
+                                <span class="option-title">Perumahan / Pribadi</span>
+                            </label>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-primary" onclick="goToStep(2)">Lanjut</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: SELECT SERVICES -->
+                    <div class="step-content" id="step-2-content">
+                        <h3>Langkah 2: Apa kendala atau kebutuhan Anda?</h3>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="checkbox" name="services" value="Troubleshooting Komputer">
+                                <span class="option-title">Troubleshooting Komputer / Laptop</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="services" value="Jaringan & WiFi">
+                                <span class="option-title">Pemasangan/Perbaikan Jaringan & WiFi</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="services" value="Audit Lisensi & Backup">
+                                <span class="option-title">Audit Lisensi Software & Backup Data</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="services" value="LCD Projector Ruang Rapat">
+                                <span class="option-title">Instalasi LCD Projector & Ruang Rapat</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="services" value="Lainnya">
+                                <span class="option-title">Kebutuhan IT Lainnya</span>
+                            </label>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-tertiary" onclick="goToStep(1)">Kembali</button>
+                            <button type="button" class="btn btn-primary" onclick="goToStep(3)">Lanjut</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: CONTACT DATA -->
+                    <div class="step-content" id="step-3-content">
+                        <h3>Langkah 3: Lengkapi Data Kontak</h3>
+                        <div class="form-fields">
+                            <div class="form-group">
+                                <label for="client-name">Nama Anda</label>
+                                <input type="text" id="client-name" required placeholder="Contoh: Budi Santoso">
+                            </div>
+                            <div class="form-group">
+                                <label for="company-name">Nama Perusahaan / Instansi</label>
+                                <input type="text" id="company-name" required placeholder="Contoh: PT Sukses Bersama">
+                            </div>
+                            <div class="form-group">
+                                <label for="client-notes">Deskripsi Singkat Masalah</label>
+                                <textarea id="client-notes" rows="3" placeholder="Tulis rincian masalah jika ada..."></textarea>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-tertiary" onclick="goToStep(2)">Kembali</button>
+                            <button type="submit" class="btn btn-primary">Kirim Konsultasi via WhatsApp</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="profile-footer">
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2026 instalulang.id. Hak Cipta Dilindungi Undang-Undang.</p>
-            <p class="footer-credit">Cepat • Bergaransi • Transparan</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo"><span>instalulang</span>.id</span>
+                    <p>Layanan IT Support spesialis penanganan komputer, jaringan, dan perangkat ruang rapat yang handal, cepat, dan profesional.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <a href="#layanan">Layanan</a>
+                    <a href="#sektor">Sektor Bisnis</a>
+                    <a href="#konsultasi">Konsultasi</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Hubungi Kami</h4>
+                    <p>WhatsApp: <a href="https://wa.me/6281804558828">0818-0455-8828</a></p>
+                    <p>Wilayah Operasional: Kantor, Kampus, Sekolah, Rumah Sakit, & Pabrik</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 instalulang.id. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
         </div>
     </footer>
 
